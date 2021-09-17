@@ -1,0 +1,73 @@
+<mvc:View
+	controllerName="casetwo.controller.Main"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true"
+	xmlns="sap.m"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page
+					id="page"
+					title="{i18n>title}"
+				>
+					<content>
+						<Table
+							headerText="Products"
+							class="sapUiMediumMargin"
+						>
+							<columns>
+								<Column>
+									<header>
+										<Text text="Items"/>
+									</header>
+									<footer>
+										<Text text="Total"/>
+									</footer>
+								</Column>
+								<Column>
+									<header>
+										<Text text="Price"/>
+									</header>
+									<footer>
+										<Text id="total"/>
+									</footer>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Text text="Item1"/>
+										<Input
+											id="input1"
+											type="Number"
+										/>
+									</cells>
+								</ColumnListItem>
+								<ColumnListItem>
+									<cells>
+										<Text text="Item2"/>
+										<Input
+											id="input2"
+											type="Number"
+										/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+						<Bar>
+							<contentMiddle>
+								<Button
+									text="Calculate"
+									icon="sap-icon://simulate"
+									press="calculate"
+									class="sapUiLargeMargin"
+								/>
+							</contentMiddle>
+						</Bar>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
